@@ -5,6 +5,10 @@ using UnityEngine;
 public class ClickButton : MonoBehaviour
 {
     GameObject button;
+
+    public GameObject X;
+    public GameObject O;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +24,7 @@ public class ClickButton : MonoBehaviour
     public void onclickButton()
     {
         Debug.Log(this.gameObject.name);
+        Instantiate(X, this.gameObject.transform.position, Quaternion.identity);
+
     }
 }
